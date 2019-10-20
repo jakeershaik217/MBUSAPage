@@ -1,2 +1,3 @@
-java -cp C:\MBUSATheampages\bin;C:\MBUSATheampages\lib\*; java org.junit.runner.JUnitCore.TheamExecuter
+java -cp "lib/*;bin"; org.junit.runner.JUnitCore com.mbusa.theampage.test.TheamExecuter
 pause
+

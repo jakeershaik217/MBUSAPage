@@ -2,10 +2,7 @@ package com.mbusa.theampage.test;
 
 
 
-import org.apache.commons.mail.DefaultAuthenticator;
-import org.apache.commons.mail.Email;
-import org.apache.commons.mail.EmailAttachment;
-import org.apache.commons.mail.SimpleEmail;
+
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +29,8 @@ public class Launch extends TestDatafile {
 		public void setup() throws InterruptedException, Exception{
 			
 			//System.setProperty("webdriver.ie.driver", "D:\\Drivers\\IEDriverServer.exe");
-			System.setProperty("webdriver.chrome.driver", "G:\\Jakeer\\chromedriver.exe");
+			String currentDirectory=System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver",currentDirectory+"\\src\\com\\mbusa\\theampage\\Resources\\chromedriver.exe");
 			
 	   driver=new ChromeDriver();
 			//driver=new FirefoxDriver();
@@ -54,7 +52,7 @@ public class Launch extends TestDatafile {
 		@After
 		public  void main() throws Exception {
 			
-			EmailAttachment attachment = new EmailAttachment();
+			/*EmailAttachment attachment = new EmailAttachment();
 			 attachment.setPath("C:\\Users\\VAMSI\\Desktop\\Vamsi_IOT_Resume.pdf");
 			 attachment.setDisposition(EmailAttachment.ATTACHMENT);
 			 attachment.setDescription("Vamsi");
@@ -68,6 +66,6 @@ public class Launch extends TestDatafile {
 			email.setSubject("TestMail");
 			email.setMsg("This is a test mail ... :-)");
 			email.addTo("shaik.jakeerhussain217@outlook.com");
-			email.send();
+			email.send();*/
 		}
 }
